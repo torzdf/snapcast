@@ -137,7 +137,6 @@ Any [json-rpc 2.0 conformant error](https://www.jsonrpc.org/specification#error_
 * `canControl`: [bool] Whether the media player may be controlled over this interface
 * `metadata`: [json] message with the following (optional) fields:
   * `trackId`: [string] A unique identity for this track within the context of an MPRIS object (eg: tracklist).
-  * `file`: [string] The current song.
   * `duration`: [float] The duration of the song in seconds; may contain a fractional part.
   * `artist`: [list of strings] The track artist(s).
   * `artistSort`: [list of strings] Same as artist, but for sorting. This usually omits prefixes such as “The”.
@@ -173,7 +172,7 @@ Any [json-rpc 2.0 conformant error](https://www.jsonrpc.org/specification#error_
   * `lastUsed`: [string] Date/Time: When the track was last played.
   * `lyricist`: [list of strings] List of Strings: The lyricist(s) of the track.
   * `title`: [string] The track title.
-  * `trackNumber`: [string] The track number on the album disc.
+  * `trackNumber`: [int] The track number on the album disc.
   * `url`: [string uri] The location of the media file.
   * `artUrl`: [string uri] The location of an image representing the track or album. Clients should not assume this will continue to exist when the media player stops giving out the URL.
   * `artData`: [json] Base64 encoded image representing the track or album. if `artUrl` is not specified, Snapserver will decode and cache the image, and will publish the image via `artUrl`.
